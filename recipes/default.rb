@@ -23,3 +23,23 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
+
+gem_package 'rest-client'
+
+require 'rest-client'
+require 'json'
+
+development = true
+
+# Need to move this to attributes file
+if development
+    url = 'https://xavierdev.service-now.com/api/now/table/'
+    username = 'CMDBAPI'
+    password = '3xxZ!H9&#lUGg2Qa'
+else
+    url = 'https://xavierdev.service-now.com/api/now/table/'
+    username = ''
+    password = ''
+end
+
+oscaption = ['kernel']['os_info']['caption']
